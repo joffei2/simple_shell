@@ -5,6 +5,7 @@ int main(void)
 	char *cache = NULL;
 	size_t size = 0;
 	int retValue;
+	pid_t pid;
 
 	char *delimiters = " ";
 	char *get;
@@ -28,7 +29,7 @@ int main(void)
 				return (-1);
 			}
 		}
-		else if (vetValue == 1)
+		else if (retValue == 1)
 		{
 			continue;
 		}
