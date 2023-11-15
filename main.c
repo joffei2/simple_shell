@@ -9,6 +9,7 @@ int main(void)
 	char *delimiters = " ";
 	char *get;
 	char *line_args[1000];
+	int index;
 
 	while (1)
 	{
@@ -19,7 +20,7 @@ int main(void)
 		{
 			if(feof(stdin))
 			{
-				builtin_exit(),
+				handle_exit(),
 			}
 			else
 			{
@@ -33,7 +34,7 @@ int main(void)
 		}
 		else
 		{
-			int index = 0;
+			index = 0;
 			get = strtok(cache, delimiters);
 		}
 		while(get != NULL)
@@ -45,7 +46,7 @@ int main(void)
 		line_args[index] = NULL;
 		if(strcmp(line_args[0], "cd") == 0)
 		{
-			handle_cd(line_args[1];
+			handle_cd(line_args[1]);
 		}
 		else if(strcmp(line_args[0], "exit") == 0)
 		{
@@ -53,7 +54,7 @@ int main(void)
 		}
 		else
 		{
-			pid = fork()
+			pid = fork();
 		}
 
 		if (pid == -1)
