@@ -8,8 +8,9 @@ int main(void)
 
 	char *delimiters = " ";
 	char *get;
+	char *line_args[1000];
 
-	while (0)
+	while (1)
 	{
 		write(1, "$ ", 2);
 
@@ -37,11 +38,9 @@ int main(void)
 		}
 		while(get != NULL)
 		{
-			line_arg[index] = get;
+			line_args[index] = get;
 			get = strtok(NULL, delimiters);
 			idex++;
-		//	pid_t pid = fork();
-		//	if (pid == -1)
 		}
 		line_args[index] = NULL;
 		if(strcmp(line_args[0], "cd") == 0)
