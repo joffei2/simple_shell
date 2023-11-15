@@ -8,5 +8,9 @@
 #include <sys/wait.h>
 #include <sys/types.h>
 
+void handle_cd(char *args);
+char *checkPath(char *command);
+void handle_exit(void);
+extern char **environ;
 
 #endif

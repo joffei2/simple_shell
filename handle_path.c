@@ -21,8 +21,8 @@ char *checkPath(char *command)
 			return (strdup(commandPath));
 			
 		}
-		dir = strtok(NULL, ":");
+		directory = strtok(NULL, ":");
 	}
 free(pathCopy);
-return (command);
+return (NULL);
 }

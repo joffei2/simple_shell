@@ -1,6 +1,6 @@
 #include "main.h"
 
-void handle_cd(char, *args)
+void handle_cd(char *args)
 {
 	if (args == NULL)
 	{

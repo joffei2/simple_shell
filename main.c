@@ -21,7 +21,7 @@ int main(void)
 		{
 			if(feof(stdin))
 			{
-				handle_exit(),
+				handle_exit();
 			}
 			else
 			{
@@ -42,7 +42,7 @@ int main(void)
 		{
 			line_args[index] = get;
 			get = strtok(NULL, delimiters);
-			idex++;
+			index++;
 		}
 		line_args[index] = NULL;
 		if(strcmp(line_args[0], "cd") == 0)
